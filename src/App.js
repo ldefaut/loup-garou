@@ -15,9 +15,11 @@ import { GameProvider } from './services/Game';
 import { UserProvider } from './services/User';
 
 
+
 function App() {
   return (
     <BrowserRouter>
+
     <UserProvider>
       <Route exact path="/" component={ StartPage } />
       <Route path="/end" component={ EndPage } />
@@ -39,5 +41,7 @@ function App() {
     </BrowserRouter>
   );
 }
+
+
 
 export default App;

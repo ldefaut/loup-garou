@@ -21,14 +21,14 @@ Je vous invite à regarder la vidéo de [Human Talks Paris](https://www.youtube.
 
 Quelques petites questions :
 
-- Résumer en une phrase l'intérêt de Material UI
-- Comment importer `material-ui` dans un fichier ?
-- Comment une application peut utiliser un thème à travers l'ensemble d'un projet ?
+- Résumer en une phrase l'intérêt de Material UI : Ce sont des composents react pour un développement web plus rapide et plus facile
+- Comment importer `material-ui` dans un fichier ? yarn add @material-ui/core
+- Comment une application peut utiliser un thème à travers l'ensemble d'un projet ? 
 - A quoi sert `createMuiTheme` ?
 - A quoi correspond `palette` ?
 - Comment re-définir des propriétés ?
 - A quoi vous fait penser `withStyle` ? Comment l'utiliser ?
-- Reproduire les deux boutons rouge et bleu présentées dans la vidéo.
+- Reproduire les deux boutons rouge et bleu présentées dans la vidéo. voir code dans src/bouton.js
 
 
 ## Styled Components
