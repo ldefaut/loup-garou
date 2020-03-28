@@ -32,8 +32,7 @@ const Button1 = styled.button`
   color : white;
   
   ${props => `
-      background-color : ${props.disabled ? 'red': 'green'};
-      cursor : ${props.disabled ? 'not-allowed' : 'pointer'};
+      background-color : ${props.disabled ? 'red': 'blue'};
   `};
 `
 
@@ -60,3 +59,5 @@ const theme = createMuiTheme({
 });
 
 export default  withStyles(styles)(Start);
+
+
