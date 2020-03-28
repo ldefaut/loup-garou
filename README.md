@@ -22,28 +22,28 @@ Je vous invite à regarder la vidéo de [Human Talks Paris](https://www.youtube.
 Quelques petites questions :
 
 - Résumer en une phrase l'intérêt de Material UI : 
-  Ce sont des composents react pour un développement web plus rapide et plus facile
+  - Ce sont des composents react pour un développement web plus rapide et plus facile
 
 - Comment importer `material-ui` dans un fichier ? 
-  yarn add @material-ui/core
+  - yarn add @material-ui/core
 
 - Comment une application peut utiliser un thème à travers l'ensemble d'un projet ? 
-  En créant une capsule engoblobant toute l'application dans le theme provider
+  - En créant une capsule engoblobant toute l'application dans le theme provider
 
 - A quoi sert `createMuiTheme` ? 
-  Cela sert pour personnaliser les composants importés par Material UI
+  - Cela sert pour personnaliser les composants importés par Material UI
 
 - A quoi correspond `palette` ? 
-  C'est pour créer une palette de couleur, pour notre application
+  - C'est pour créer une palette de couleur, pour notre application
 
 - Comment re-définir des propriétés ? 
-  Avec l'attribut "overrides"
+  - Avec l'attribut "overrides"
 
 - A quoi vous fait penser `withStyle` ? 
-  A un HOC. 
+  - A un HOC. 
 
 - Comment l'utiliser ? 
-  On doit d'abord l'importer depuis material ui puis exporter l'application avec le withStyle. 
+  - On doit d'abord l'importer depuis material ui puis exporter l'application avec le withStyle. 
 
 - Reproduire les deux boutons rouge et bleu présentées dans la vidéo. 
   ```javascript  
@@ -85,10 +85,10 @@ De la même manière, voici une [vidéo](https://www.youtube.com/watch?v=mS0UKNB
 Quelques petites questions :
 
 - Qu'est-ce que le CSS-in-JS ? 
-  Créer du CSS directement dans le JS
+  - Créer du CSS directement dans le JS
 
 - Qu'est-ce que sont les tagged templates (délimitées par des backticks) ? 
-  Ils permettent de définir des règles d'interpolation de chaînes personnalisées pour pouvoir styliser nos composants
+  - Ils permettent de définir des règles d'interpolation de chaînes personnalisées pour pouvoir styliser nos composants
 
 - Donner un exemple d'un bouton personnalisé avec et sans les tagged templates ?
     
@@ -131,7 +131,7 @@ Quelques petites questions :
     ```
 
 - Quelles sont les fonctions du contexte de styled-components ?
-Le contexte de styled components permet la gestion de thèmes. Il permet aussi de combiner les compositions react classiques avec celles de Styled components
+  - Le contexte de styled components permet la gestion de thèmes. Il permet aussi de combiner les compositions react classiques avec celles de Styled components
 
 ## Mise en place du design
 
@@ -176,7 +176,7 @@ Bouton sous la forme d'une fonction :
   const [val, setVal] = React.useState(false)
   ```
 - Comment récupérer les props dans une fonction ?
-  On spécifie les props en paramètre de la fonction pour y accéder.
+  - On spécifie les props en paramètre de la fonction pour y accéder.
 
 - Dans `App.js`, identifier les différents producteurs de données. Retrouver leur définition. Quelles données partagent-ils à l'ensemble de l'application ?
   - BrowserRouter: Il partage le routage pour les Routes.
@@ -185,7 +185,7 @@ Bouton sous la forme d'une fonction :
   - GameProvider: appelle des fonctions sur des éléments du jeu.
   
 - Identifier les différentes pages de l'application. Décrire à l'aide d'une phrase le rôle de chacune d'entre elles.
-  - - Alivepage:  Affichage pour les joueurs vivant lorsque ce n'est pas à nous de jouer
+  - Alivepage:  Affichage pour les joueurs vivant lorsque ce n'est pas à nous de jouer
   - CastPage: La page de vote pour les joueurs vivants
   - CodePage: La page pour rejoindre une partie
   - CreatePage: La page pour créer une partie
@@ -197,13 +197,13 @@ Bouton sous la forme d'une fonction :
   - StartPage: La page d'accueil
 
 - Pourquoi voit-on sur plusieurs pages "Chargement du master game en cours" ?
-  Car le provider MasterGame est appelé continuellement, mais vu que la partie n'a pas commencée, le MasterGame est en chargement.
+  - Car le provider MasterGame est appelé continuellement, mais vu que la partie n'a pas commencée, le MasterGame est en chargement.
 
 - Avec les classes, nous utilisions `withMyContext` pour s'inscrire aux données d'un provider. Identifier dans services/Game.js la fonction qui joue désormais ce rôle.
-  Il s'agit de la fonction `useGame()`
+  - Il s'agit de la fonction `useGame()`
 
 - Dans `CodePage`, rappeler comment un formulaire gère les champs de remplissage des données.o
-  A chaque fois qu'on modifie une valeur, on stocke la nouvelle  valeur tapée dans le state. lorsqu'on submit on récupère cette valeur.
+  - A chaque fois qu'on modifie une valeur, on stocke la nouvelle  valeur tapée dans le state. lorsqu'on submit on récupère cette valeur.
 
 ### Reprise du design
 
@@ -217,16 +217,16 @@ Bouton sous la forme d'une fonction :
 ### Utilisation de Firebase
 
 - Dans 'User.js', comment fait-on pour garder une trace persistente de l'application, même lorsqu'on rafraichit la page ? Comment reconnait-on l'utilisateur lorsqu'il revient dans l'application ?
-  il s'agit de l'objet Auth qui est fourni dans firebase. Ca  permet de garder en mémoire l'utilisateur connecté en générant un cookie. La fonction `useSession()` renvoie un context qui fournit l'objet utilisateur connecté à Firebase. Tout ca permet de ne pas avoir de backend pour le rafraichissement de la page, car tout est géré par FireBase.
+  - il s'agit de l'objet Auth qui est fourni dans firebase. Ca  permet de garder en mémoire l'utilisateur connecté en générant un cookie. La fonction `useSession()` renvoie un context qui fournit l'objet utilisateur connecté à Firebase. Tout ca permet de ne pas avoir de backend pour le rafraichissement de la page, car tout est géré par FireBase.
 
 - Dans Firebase, nous ne pouvons pas ajouter des champs à un utilisateur. Par conséquent, nous devons créer une collection d'utilisateurs et synchroniser les utilisateurs avec cette table. Expliquer où est-ce que cette synchronisation a lieu.
-  La synchronisation a lieu dans `useUser`. On récupère identifie l'utilisateur, on vierifie si l'id est dans la base de donnée, s'il y est on le synchronise avec le firestore, sinon on lui crée un id.
+  - La synchronisation a lieu dans `useUser`. On récupère identifie l'utilisateur, on vierifie si l'id est dans la base de donnée, s'il y est on le synchronise avec le firestore, sinon on lui crée un id.
 
 - A votre avis, à quoi sert useEffect ?
-  useEffect nous permet d’exprimer différentes sortes d’effets de bord après l’affichage d’un composant.
+  - useEffect nous permet d’exprimer différentes sortes d’effets de bord après l’affichage d’un composant.
 
 - A quoi sert la fonction `unsubscribe` utilisée dans les `useEffect` de `User.js` ?
-  Cela permet d'arreter l'attente de la mise à jour de firebase. la fonction est appelée une fois que les actions du useEffect sont terminées.
+  - Cela permet d'arreter l'attente de la mise à jour de firebase. la fonction est appelée une fois que les actions du useEffect sont terminées.
 
 - Décrire les trois valeurs de retour de `UseUser`.
   - `error` : permet de récuperer les informations dsur une erreur si elle apparait
