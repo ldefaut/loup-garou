@@ -21,13 +21,30 @@ Je vous invite à regarder la vidéo de [Human Talks Paris](https://www.youtube.
 
 Quelques petites questions :
 
-- Résumer en une phrase l'intérêt de Material UI : Ce sont des composents react pour un développement web plus rapide et plus facile
-- Comment importer `material-ui` dans un fichier ? yarn add @material-ui/core
-- Comment une application peut utiliser un thème à travers l'ensemble d'un projet ? en créant une capsule engoblobant toute l'application dans le theme provider
-- A quoi sert `createMuiTheme` ? Cela sert pour personnaliser les composants importés par Material UI
-- A quoi correspond `palette` ? C'est pour créer une palette de couleur, pour notre application
-- Comment re-définir des propriétés ? avec l'attribut "overrides"
-- A quoi vous fait penser `withStyle` ? un HOC. Comment l'utiliser ? on doit d'abord l'importer depuis material ui puis exporter l'application avec le withStyle. 
+- Résumer en une phrase l'intérêt de Material UI : 
+  Ce sont des composents react pour un développement web plus rapide et plus facile
+
+- Comment importer `material-ui` dans un fichier ? 
+  yarn add @material-ui/core
+
+- Comment une application peut utiliser un thème à travers l'ensemble d'un projet ? 
+  En créant une capsule engoblobant toute l'application dans le theme provider
+
+- A quoi sert `createMuiTheme` ? 
+  Cela sert pour personnaliser les composants importés par Material UI
+
+- A quoi correspond `palette` ? 
+  C'est pour créer une palette de couleur, pour notre application
+
+- Comment re-définir des propriétés ? 
+  Avec l'attribut "overrides"
+
+- A quoi vous fait penser `withStyle` ? 
+  A un HOC. 
+
+- Comment l'utiliser ? 
+  On doit d'abord l'importer depuis material ui puis exporter l'application avec le withStyle. 
+
 - Reproduire les deux boutons rouge et bleu présentées dans la vidéo. 
   ```javascript  
     const bouton_Mui = (props) => {
@@ -67,8 +84,12 @@ De la même manière, voici une [vidéo](https://www.youtube.com/watch?v=mS0UKNB
 
 Quelques petites questions :
 
-- Qu'est-ce que le CSS-in-JS ? Créer du CSS directement dans le JS
-- Qu'est-ce que sont les tagged templates (délimitées par des backticks) ? Ils permettent de définir des règles d'interpolation de chaînes personnalisées pour pouvoir styliser nos composants
+- Qu'est-ce que le CSS-in-JS ? 
+  Créer du CSS directement dans le JS
+
+- Qu'est-ce que sont les tagged templates (délimitées par des backticks) ? 
+  Ils permettent de définir des règles d'interpolation de chaînes personnalisées pour pouvoir styliser nos composants
+
 - Donner un exemple d'un bouton personnalisé avec et sans les tagged templates ?
     
     sans tagged templates :
