@@ -13,12 +13,16 @@ import DeadPage from './pages/DeadPage'
 import { MasterGameProvider } from './services/MasterGame';
 import { GameProvider } from './services/Game';
 import { UserProvider } from './services/User';
+import Header from './components/header';
+import Footer from './components/footer';
+
 
 
 
 function App() {
   return (
     <BrowserRouter>
+    <Header/>
 
     <UserProvider>
       <Route exact path="/" component={ StartPage } />
@@ -38,6 +42,7 @@ function App() {
         <Route path="/spell" component={ SpellPage } />
       </GameProvider>
     </UserProvider>
+    <Footer/>
     </BrowserRouter>
   );
 }
